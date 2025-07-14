@@ -37,7 +37,7 @@ public class MovieController {
         return movieService.create(movie);
     }
     @PutMapping("/{id}")
-    public Movie updae(@PathVariable Long id, @Valid @RequestBody MovieDto movieDto) {
+    public Movie update(@PathVariable Long id, @Valid @RequestBody MovieDto movieDto) {
         Movie movie = new Movie();
         movie.setTitle(movieDto.getTitle());
         movie.setReleaseYear(movieDto.getReleaseYear());
